@@ -1,2 +1,2 @@
 # bash-scripts
-A collection of scripts of snippets of scripts
+A collection of scripts and snippets of scripts
