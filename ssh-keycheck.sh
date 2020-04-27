@@ -17,8 +17,7 @@ if diff <(echo "$KEY") <(echo "$MD5"); then
     # Imported key matches with known-good key, so add the keys to known_hosts
     printf "SSH keys match!"
     cat /tmp/github_ssh >> /root/.ssh/known_hosts
-    chmod 0600 /root/.ssh/id_rsa /root/.ssh/known_hosts
-    printf " Key added.\n"
+    chmod 0600 /root/.ssh/known_hosts
 else
     # Imported key did not match, give user 30 seconds to import the keys anyway
     # This section is optional
