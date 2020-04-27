@@ -18,7 +18,7 @@ if diff <(echo "$KEY") <(echo "$MD5"); then
     printf "SSH keys match!"
     cat /tmp/github_ssh >> /root/.ssh/known_hosts
     chmod 0600 /root/.ssh/id_rsa /root/.ssh/known_hosts
-    prinf " Key added.\n"
+    printf " Key added.\n"
 else
     # Imported key did not match, give user 30 seconds to import the keys anyway
     # This section is optional
@@ -28,7 +28,7 @@ else
         printf "\nAdding key anyway..."
         cat /tmp/github_ssh >> /root/.ssh/known_hosts
         chmod 0600 /root/.ssh/id_rsa /root/.ssh/known_hosts
-        prinf " Key added.\n"
+        printf " Key added.\n"
     else
     # Exit script
     # Maybe do some rescue work here...
