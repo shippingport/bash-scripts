@@ -22,7 +22,7 @@ else
     # Imported key did not match, give user 30 seconds to import the keys anyway
     # This section is optional
     read -t 30 -p "SSH keys did not match. Import anyway? (NOT RECOMMENDED) [y/N]" -n 1 -r
-    if [[ $REPLY =~ ^(yes|y|Y)$ ]]; then
+    if [[ $REPLY =~ ^(y|Y)$ ]]; then
     # Import the key
         printf "\nAdding key anyway..."
         cat /tmp/github_ssh >> /root/.ssh/known_hosts
